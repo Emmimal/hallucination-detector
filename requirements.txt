@@ -1,0 +1,12 @@
+# hallucination-detector dependencies
+# SQLite is Python standard library — no install needed.
+
+# Named entity recognition (production path)
+# Without this, regex NER fallback activates automatically with a warning.
+spacy>=3.5.0
+
+# spaCy model — run after pip install:
+#   python -m spacy download en_core_web_sm
+
+# Test runner
+pytest>=7.0.0
