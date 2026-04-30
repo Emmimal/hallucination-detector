@@ -133,7 +133,7 @@ python demo.py
 | Demo | Failure Mode | Healing Strategy |
 |------|-------------|-----------------|
 | 1 | Confident lie — 30 days vs 14 days policy | Contradiction patch |
-| 2 | Hallucinated citation — Dr. James Harrison | Entity scrub |
+| 2 | Hallucinated citation — Dr. James Harrison | Grounding rewrite |
 | 3 | Billing contradiction — $10/month vs $120/year | Contradiction patch + billing normalization |
 | 4 | Silent price drift — $49.99 → $39.99 over time | Grounding rewrite |
 | 5 | Clean answer — no healing needed | Passes through unchanged |
@@ -284,9 +284,7 @@ If you need sub-10ms end-to-end, the regex NER fallback is a one-line config cha
 hallucination-detector/
 ├── hallucination_detector.py          # Full pipeline — detector, healer, scorer
 ├── demo.py                            # Five runnable production scenarios
-├── tests/
-│   └── test_hallucination_detector.py # 70 tests covering all failure modes
-├── SCENARIOS.md                       # Detailed walkthrough of all 5 scenarios
+├── test_hallucination_detector.py # 70 tests covering all failure modes
 ├── requirements.txt
 └── README.md
 ```
