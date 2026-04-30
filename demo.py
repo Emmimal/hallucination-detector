@@ -87,8 +87,9 @@ def scenario_2():
   The model invented two researchers and a paper citation. None of them
   appear anywhere in the retrieved context.
 
-  Expected outcome: entity_scrub removes the offending sentences and
-  appends a transparency note.
+  Expected outcome: grounding_rewrite rebuilds the answer from context —
+  faithfulness of 0.00 fires the first priority check before entities
+  are considered.
     """)
 
     context = [
