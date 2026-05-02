@@ -20,13 +20,13 @@ Read the full write-up on Towards Data Science →
 
 ## The Problem
 
-My RAG system was pulling the right document — and still giving the wrong answer.
+RAG retrieves the correct document. The LLM still generates the wrong answer.
 
-During testing, I noticed something worrying. The assistant kept telling users they had 30 days to return items. The actual policy was 14 days. Retrieval wasn’t the issue — it was consistently finding the correct document. But somewhere between reading that context and generating the response, the model drifted.
+In my system, the model repeatedly returned answers that directly contradicted the retrieved context — for example, stating a 30-day return policy when the source clearly specified 14 days. Retrieval was working as expected. The failure happened at generation.
 
-There was no crash. No warning. Nothing in the logs that would have caught it.
+There was no error, no alert, and nothing in the logs to indicate the response was wrong.
 
-That gap is exactly what this library is built to detect — before it reaches a real user.
+This library is built to detect and fix that class of failure before it reaches the user.
 
 ---
 
