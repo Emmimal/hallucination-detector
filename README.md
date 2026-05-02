@@ -20,11 +20,13 @@ Read the full write-up on Towards Data Science →
 
 ## The Problem
 
-RAG retrieves correctly. The LLM still hallucinates.
+My RAG system was pulling the right document — and still giving the wrong answer.
 
-A customer support bot ran for six weeks telling users they had **30 days** to return items. The actual policy was **14 days**. Retrieval worked perfectly — the model read the right document and generated the wrong answer. No crash, no alert, no error log.
+During testing, I noticed something worrying. The assistant kept telling users they had 30 days to return items. The actual policy was 14 days. Retrieval wasn’t the issue — it was consistently finding the correct document. But somewhere between reading that context and generating the response, the model drifted.
 
-This library catches that failure before it reaches the user.
+There was no crash. No warning. Nothing in the logs that would have caught it.
+
+That gap is exactly what this library is built to detect — before it reaches a real user.
 
 ---
 
