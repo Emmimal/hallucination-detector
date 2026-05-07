@@ -14,7 +14,7 @@ Most RAG tutorials stop at: retrieve documents, stuff them into a prompt, call t
 This library handles what comes next — catching when the model contradicts its own retrieved sources, fixing the answer before it reaches the user, and routing the result based on a quality score.
 
 Read the full write-up on Towards Data Science →  
-**[RAG Hallucinates — I Built a Self-Healing Layer That Fixes It in Real Time](https://towardsdatascience.com)**
+**[RAG Hallucinates — I Built a Self-Healing Layer That Fixes It in Real Time](https://towardsdatascience.com/rag-hallucinates-i-built-a-self-healing-layer-that-fixes-it-in-real-time/)**
 
 ---
 
